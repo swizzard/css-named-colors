@@ -1,5 +1,6 @@
 [package]
 name = "css-named-colors"
+description = "CSS Named Colors"
 version = "1.0.0"
 edition = "2024"
 readme = "README.md"
