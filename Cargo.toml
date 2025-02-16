@@ -1,0 +1,11 @@
+[package]
+name = "css-named-colors"
+version = "1.0.0"
+edition = "2024"
+readme = "README.md"
+license = "MIT"
+keywords = ["css", "colors"]
+categories = ["no-std::no-alloc", "web-programming"]
+repository = "https://github.com/swizzard/css-named-colors"
+
+[dependencies]
