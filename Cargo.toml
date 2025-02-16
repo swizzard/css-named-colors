@@ -1,12 +1,13 @@
 [package]
 name = "css-named-colors"
 description = "CSS Named Colors"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 readme = "README.md"
 license = "MIT"
 keywords = ["css", "colors"]
 categories = ["no-std::no-alloc", "web-programming"]
 repository = "https://github.com/swizzard/css-named-colors"
+documentation = "https://docs.rs/css-named-colors"
 
 [dependencies]

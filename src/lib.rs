@@ -6,11 +6,11 @@
 //! 1. `transparent` is a [valid
 //!    name](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color#transparent) that
 //!    occasionally requires special handling    
-//! 2. When color names collide, I have deferred to alphabetic order (`"aqua"` instead of "cyan"`,
+//! 2. When color names collide, I have deferred to alphabetic order (`"aqua"` instead of "`cyan"`,
 //!    `"fuchsia"` instead of `"magenta`, `"gray"` instead of `"grey"`)
 
 #![no_std]
-/// CSS Named color
+/// CSS named color
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
 pub enum NamedColor {
     ALICEBLUE,
@@ -166,7 +166,7 @@ pub enum NamedColor {
 
 impl NamedColor {
     /// hex code including the leading '#'    
-    /// `TRANSPARENT` is rendered as `"transparent"`
+    /// [`NamedColor::TRANSPARENT`] is rendered as `"transparent"`
     pub const fn hex(&self) -> &'static str {
         use NamedColor::*;
         match self {
@@ -937,6 +937,8 @@ impl NamedColor {
             YELLOWGREEN => Some((154, 205, 50)),
         }
     }
+    /// possibly convert a `(red, green, blue)` tuple to a [`NamedColor`]   
+    /// the same rules apply as [`NamedColor::from_hex`]
     pub const fn from_rgb(rgb: (u8, u8, u8)) -> Option<Self> {
         use NamedColor::*;
         match rgb {
